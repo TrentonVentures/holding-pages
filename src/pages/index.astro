@@ -13,38 +13,155 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<div class="hero">
+				<h1>🚀 Hey there, I'm Arthur Dell!</h1>
+				<div class="tagline">
+					<p><strong>I AM ARTHUR DELL - ON DEMAND! 💪</strong></p>
+				</div>
+			</div>
+			
+			<div class="intro">
+				<p>
+					Welcome to my corner of the internet! I'm not your average guy - I live life at full throttle 
+					and I'm always ready for the next adventure. Whether I'm gliding through the city on my 
+					rollerblades, scaling walls with parkour moves, or discovering the most incredible food spots, 
+					I bring passion and excitement to everything I do.
+				</p>
+				
+				<p>
+					Life's too short to be boring, right? That's why I've made it my mission to squeeze every 
+					drop of excitement out of every single day. From sunrise workouts to midnight food runs, 
+					I'm <em>always</em> ON DEMAND!
+				</p>
+			</div>
+
+			<div class="highlights">
+				<h2>What Gets Me Excited? 🌟</h2>
+				<div class="grid">
+					<div class="card">
+						<h3>🛼 Rollerblading</h3>
+						<p>The wind in my hair, the rhythm of the wheels - there's nothing like carving through the streets with style!</p>
+					</div>
+					
+					<div class="card">
+						<h3>🏃‍♂️ Parkour</h3>
+						<p>Why walk around obstacles when you can go over, under, and through them? The city is my playground!</p>
+					</div>
+					
+					<div class="card">
+						<h3>🍕 Food Adventures</h3>
+						<p>From hole-in-the-wall tacos to five-star dining experiences - I'm on a mission to taste it all!</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="cta">
+				<p>
+					Ready to learn more about my wild adventures and epic food discoveries? 
+					Check out my <a href="/about">About page</a> for the full stories!
+				</p>
+			</div>
 		</main>
 		<Footer />
+		
+		<style>
+			.hero {
+				text-align: center;
+				padding: 2em 0;
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				color: white;
+				margin: -1em -1em 2em -1em;
+			}
+			
+			.hero h1 {
+				font-size: 2.5em;
+				margin-bottom: 0.5em;
+			}
+			
+			.tagline {
+				font-size: 1.3em;
+				background: rgba(255,255,255,0.2);
+				padding: 1em;
+				border-radius: 10px;
+				display: inline-block;
+			}
+			
+			.intro {
+				max-width: 800px;
+				margin: 0 auto 3em auto;
+				font-size: 1.1em;
+				line-height: 1.6;
+			}
+			
+			.highlights {
+				margin: 3em 0;
+			}
+			
+			.highlights h2 {
+				text-align: center;
+				font-size: 2em;
+				margin-bottom: 1.5em;
+				color: #667eea;
+			}
+			
+			.grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 1.5em;
+				margin-bottom: 3em;
+			}
+			
+			.card {
+				background: #f8f9fa;
+				padding: 1.5em;
+				border-radius: 10px;
+				text-align: center;
+				box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+				transition: transform 0.2s;
+			}
+			
+			.card:hover {
+				transform: translateY(-5px);
+			}
+			
+			.card h3 {
+				color: #667eea;
+				margin-bottom: 0.5em;
+				font-size: 1.3em;
+			}
+			
+			.cta {
+				text-align: center;
+				background: #667eea;
+				color: white;
+				padding: 2em;
+				border-radius: 10px;
+				font-size: 1.2em;
+			}
+			
+			.cta a {
+				color: #fff;
+				text-decoration: underline;
+				font-weight: bold;
+			}
+			
+			main {
+				padding: 1em;
+			}
+			
+			@media (max-width: 720px) {
+				.hero h1 {
+					font-size: 2em;
+				}
+				
+				.tagline {
+					font-size: 1.1em;
+				}
+				
+				.grid {
+					grid-template-columns: 1fr;
+				}
+			}
+		</style>
 	</body>
 </html>
